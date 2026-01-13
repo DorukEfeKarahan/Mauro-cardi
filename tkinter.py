@@ -1,0 +1,104 @@
+from tkinter import *
+from PIL import ImageTk, Image
+import os
+
+root = Tk()
+img = ImageTk.PhotoImage(Image.open("True1.gif"))
+panel = Label(root, image = img)
+panel.pack(side = "bottom", fill = "both", expand = "yes")
+root.mainloop()
+
+root = Tk()
+root.geometry("550x300+300+150")
+root.resizable(width=True, height=True)
+
+def openfn():
+    filename = filedialog.askopenfilename(title='open')
+    return filename
+def open_img():
+    filename = openfn()
+    img = Image.open(filename)
+    img = img.resize((250, 250), Image.ANTIALIAS)
+    img = ImageTk.PhotoImage(img)
+    panel = Label(root, image=img)
+    panel.image = img
+    panel.pack()
+
+btn = Button(root, text='open image', command=open_img).pack()
+
+root.mainloop()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
