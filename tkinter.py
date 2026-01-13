@@ -8,6 +8,11 @@ panel = Label(root, image = img)
 panel.pack(side = "bottom", fill = "both", expand = "yes")
 root.mainloop()
 
+from tkinter import *
+from PIL import ImageTk, Image
+from tkinter import filedialog
+import os
+
 root = Tk()
 root.geometry("550x300+300+150")
 root.resizable(width=True, height=True)
